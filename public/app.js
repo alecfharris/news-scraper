@@ -43,7 +43,6 @@ $.getJSON("/articles", function(data) {
     })
       // With that done, add the note information to the page
       .then(function(data) {
-        console.log(data);
         getComments(data);
         // // If there's a note in the article
         // if (data.note) {
@@ -72,17 +71,6 @@ $.getJSON("/articles", function(data) {
         body: $("#bodyinput").val()
       }
     })
-    //   // With that done
-    //   .then(function(data) {
-    //     // Log the response
-    //     console.log(data);
-    //     // Empty the notes section
-    //     $("#notes").empty();
-    //   });
-  
-    // // Also, remove the values entered in the input and textarea for note entry
-    // $("#titleinput").val("");
-    // $("#bodyinput").val("");
     // If that API call succeeds, add the title and a delete button for the note to the page
     .then(function(data) {
       // Add the title and delete button to the #results section
